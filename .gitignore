@@ -1,0 +1,8 @@
+*
+
+!.gitignore
+!docker-compose.yml
+!dockerfile
+!Makefile
+!README.md
+!TODO.txt
