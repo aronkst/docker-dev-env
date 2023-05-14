@@ -1,4 +1,0 @@
-add on docker-compose:
-  PostgreSQL
-  Redis
-  MongoDB
