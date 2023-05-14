@@ -1,173 +1,66 @@
 # DEV
 
-This is a Debian development environment running inside Docker.
+This project provides a Docker-based development environment that includes several programming languages and frameworks, as well as popular databases.
 
-## Zsh
+## Features
 
+- Pre-installed programming languages: Ruby, Erlang, Elixir, Go, Node, Python and Rust.
+- Pre-installed frameworks: Ruby on Rails and Phoenix Framework.
+- Integrated with PostgreSQL, MongoDB, and Redis.
+- Main commands to manage the environment are available in the Makefile file.
+- Access to bash inside the development environment.
+
+## Getting Started
+
+1. Install [Docker](https://docs.docker.com/get-docker/) on your machine.
+2. Clone this repository.
+3. Run `make build` to build the development environment.
+4. Run `make start-all` to start.
+5. Access the development environment by running `make bash`.
+
+# Makefile Commands
+
+Start the development environment, PostgreSQL, MongoDB, and Redis.
 ```
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+make start-all
 ```
-
-Change the theme inside the file `~/.zshrc`.
-
+Start only the development environment.
 ```
-ZSH_THEME="gnzh"
+make start-dev
 ```
-
-## Git
-
-Enable the plugin by adding it to your plugins definition in `~/.zshrc`.
-
+Start PostgreSQL only.
 ```
-plugins=(... git)
+make start-postgres
 ```
-
-## asdf
-
+Start Redis only.
 ```
-git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.10.2
+make start-redis
 ```
-
-Enable the plugin by adding it to your plugins definition in `~/.zshrc`.
-
+Start MongoDB only.
 ```
-plugins=(... asdf)
+make start-mongo
 ```
-
-## Ruby
-
-```
-asdf plugin add ruby https://github.com/asdf-vm/asdf-ruby.git
-asdf install ruby latest
-asdf global ruby latest
-```
-
-Enable the plugin by adding it to your plugins definition in `~/.zshrc`.
-
-```
-plugins=(... ruby)
-```
-
-## Ruby on Rails
-
-```
-gem install rails
-```
-
-Enable the plugin by adding it to your plugins definition in `~/.zshrc`.
-
-```
-plugins=(... rails)
-```
-
-## Erlang
-
-```
-asdf plugin add erlang https://github.com/asdf-vm/asdf-erlang.git
-asdf install erlang latest
-asdf global erlang latest
-```
-
-## Elixir
-
-```
-asdf plugin-add elixir https://github.com/asdf-vm/asdf-elixir.git
-asdf install elixir latest
-asdf global elixir latest
-```
-
-```
-mix local.hex
-```
-
-## Phoenix Framework
-
-```
-mix archive.install hex phx_new
-```
-
-## Go
-
-```
-asdf plugin-add golang https://github.com/kennyp/asdf-golang.git
-asdf install golang latest
-asdf global golang latest
-```
-
-Enable the plugin by adding it to your plugins definition in `~/.zshrc`.
-
-```
-plugins=(... golang)
-```
-
-## NodeJS
-
-```
-asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
-asdf install nodejs latest
-asdf global nodejs latest
-```
-
-Enable the plugin by adding it to your plugins definition in `~/.zshrc`.
-
-```
-plugins=(... node)
-```
-
-## Rust
-
-```
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-```
-
-Enable the plugin by adding it to your plugins definition in `~/.zshrc`.
-
-```
-plugins=(... rust)
-```
-
-# Makefile
-
-There are some commands inside the Makefile to facilitate the execution of this development environment.
-
-Run:
-
-```
-make run
-```
-
-Start:
-
-```
-make start
-```
-
-Stop:
-
+Stop all.
 ```
 make stop
 ```
-
-Logs:
-
+View the logs.
 ```
 make logs
 ```
-
-Build:
-
+Build the development environment.
 ```
 make build
 ```
-
-Zsh:
-
-```
-make zsh
-```
-
-Bash:
-
+Access bash inside the development environment.
 ```
 make bash
 ```
+
+## Contributing
+
+If you find any issues or have suggestions for improvements, please open an issue or a pull request.
+
+## License
+
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
