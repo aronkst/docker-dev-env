@@ -2,7 +2,7 @@
 
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.11.3
 echo '' >> ~/.bashrc
-echo '. "~/.asdf/asdf.sh"' >> ~/.bashrc
+echo '. "/root/.asdf/asdf.sh"' >> ~/.bashrc
 
 source ~/.asdf/asdf.sh
 
