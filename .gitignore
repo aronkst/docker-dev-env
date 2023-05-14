@@ -1,8 +1,9 @@
 *
 
 !.gitignore
+!dev.sh
 !docker-compose.yml
 !dockerfile
 !Makefile
 !README.md
-!dev.sh
+!LICENSE
