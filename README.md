@@ -1,6 +1,8 @@
 # DEV
 
-This project provides a Docker-based development environment that includes several programming languages and frameworks, as well as popular databases.
+This project offers a comprehensive Docker-based development environment designed to streamline and enhance the development process. It includes support for multiple programming languages and frameworks, ensuring versatility and adaptability for various development needs.
+
+Additionally, this environment integrates popular databases, providing a robust and cohesive setup for developers. By leveraging Docker, the project simplifies the setup and management of development tools, enabling developers to focus more on coding and less on configuration.
 
 ## Features
 
